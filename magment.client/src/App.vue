@@ -4,18 +4,39 @@ import TheWelcome from './components/TheWelcome.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+    <header>
+        <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+        <div class="wrapper">
+            <HelloWorld msg="You did it!" />
+        </div>
+    </header>
+    <div id="app">
+        <div class="title">
+            <div class="btn" @click="msg='Login'">登录</div>
+            <div class="btn" @click="msg='Reg'">注册</div>
+        </div>
+        <component :is="msg"></component>
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
 </template>
+
+<script>
+    //这里的from路径根据自己的布局更改路径
+    import Login from '@/views/login.vue'
+    import Reg from '@/views/register.vue'
+    export default {
+        name: 'App',
+        data() {
+            return {
+                msg: "Login"
+            }
+        },
+        components: {
+            Login,
+            Reg
+        }
+    }
+</script>
 
 <style scoped>
 header {
