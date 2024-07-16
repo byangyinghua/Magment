@@ -1,6 +1,6 @@
 <template>
     <div class="ValidCode disabled-select"
-         :style="`width:${width}; height:${height}`"
+         :style="width:80px; height:40px"
          @click="refreshCode">
         <span v-for="(item, index) in codeList"
               :key="index"

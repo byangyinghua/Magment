@@ -1,11 +1,11 @@
 ﻿<template>
     <div class="container">
         <div class="login-wrapper">
-            <div class="header">Login</div>
+            <div class="header">登录</div>
             <div class="form-wrapper">
-                <input type="text" name="username" placeholder="username" class="input-item">
-                <input type="password" name="password" placeholder="password" class="input-item">
-                <div class="btn">Login</div>
+                <input type="text" name="username" placeholder="用户名" class="input-item">
+                <input type="password" name="password" placeholder="密码" class="input-item">
+                <div class="btn">登录</div>
             </div>
         </div>
     </div>
@@ -74,21 +74,31 @@
 
     .container {
         /* margin-top: 5%; */
+        width: 720px;
         height: 980px;
-        width: 100%;
+        position: absolute;
+        top:120px;
+        right:860px;
+        bottom: 10px;
+        left: 900px;
+        background: #abc1ee;
         background-image: linear-gradient(to right, #fbc2eb, #a6c1ee);
+        inline-size: stretch;
     }
 
     .login-wrapper {
-        background-color: #fff;
-        width: 358px;
-        height: 588px;
+        background-color: #b6ff00;
+        width: 560px;
+        height: 888px;
         border-radius: 15px;
         padding: 0 50px;
         position: absolute;
-        left: 50%;
-        top: 50%;
+        top: 480px;
+        right: 600px;
+        bottom: 10px;
+        left:340px;
         transform: translate(-50%, -50%);
+        inline-size: stretch;
     }
 
     .header {
@@ -109,20 +119,27 @@
         outline: none;
     }
 
-        .input-item:placeholder {
+        .input-item::placeholder {
             text-transform: uppercase;
         }
 
     .btn {
         text-align: center;
         padding: 10px;
-        margin: 0 auto;
-        width: 100%;
-        margin-top: 40px;
-        background-image: linear-gradient(to right, #a6c1ee, #fbc2eb);
+        margin: 20px auto;
+        border-radius: 15px;
+        width:100%;
+       background-image: linear-gradient(to right, #a6c1ee, #fbc2eb);
         color: #fff;
-    }
 
+    }
+    .btn:hover {
+        background-color: rgb(180,193,237);
+    }
+    .btn:active {
+        position: relative;
+        top: 5px;
+    }
     .msg {
         text-align: center;
         line-height: 88px;
